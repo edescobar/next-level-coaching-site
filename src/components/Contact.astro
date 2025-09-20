@@ -23,7 +23,7 @@ const t = getTranslations(lang);
 
     <div class="max-w-6xl mx-auto">
       <div class="grid lg:grid-cols-2 gap-12">
-        <!-- Contact Form -->
+        <!-- Booking Widget -->
         <div class="bg-white rounded-2xl shadow-xl p-8">
           <h3 class="text-2xl font-bold text-slate-900 mb-6">
             {t.contact.bookSession}
@@ -32,80 +32,32 @@ const t = getTranslations(lang);
             {t.contact.scheduleText}
           </p>
 
-          <form id="contact-form" class="space-y-6">
-            <!-- Name Field -->
-            <div>
-              <label for="name" class="block text-sm font-semibold text-slate-700 mb-2">
-                {t.contact.name}
-              </label>
-              <input
-                type="text"
-                id="name"
-                name="name"
-                required
-                class="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
-              />
-            </div>
+          <!-- Zcal Booking Widget -->
+          <div class="zcal-inline-widget" style="min-height: 400px;">
+            <a href="https://zcal.co/i/37LAziB7" class="inline-flex items-center justify-center px-8 py-4 bg-blue-900 text-white font-semibold rounded-lg hover:bg-blue-800 transition-colors duration-200 shadow-lg hover:shadow-xl">
+              {lang === 'en' ? 'Schedule Your 30 Minute Discovery Call' : 'Agenda Tu Llamada de Descubrimiento de 30 Minutos'}
+            </a>
+          </div>
 
-            <!-- Email Field -->
-            <div>
-              <label for="email" class="block text-sm font-semibold text-slate-700 mb-2">
-                {t.contact.email}
-              </label>
-              <input
-                type="email"
-                id="email"
-                name="email"
-                required
-                class="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
-              />
-            </div>
-
-            <!-- Company Field -->
-            <div>
-              <label for="company" class="block text-sm font-semibold text-slate-700 mb-2">
-                {t.contact.company}
-              </label>
-              <input
-                type="text"
-                id="company"
-                name="company"
-                class="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
-              />
-            </div>
-
-            <!-- Message Field -->
-            <div>
-              <label for="message" class="block text-sm font-semibold text-slate-700 mb-2">
-                {t.contact.message}
-              </label>
-              <textarea
-                id="message"
-                name="message"
-                rows="4"
-                required
-                class="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 resize-none"
-              ></textarea>
-            </div>
-
-            <!-- Submit Button -->
-            <button
-              type="submit"
-              class="w-full px-8 py-4 bg-blue-900 text-white font-semibold rounded-lg hover:bg-blue-800 transition-colors duration-200 shadow-lg hover:shadow-xl"
-            >
-              {t.contact.submit}
-            </button>
-
-            <!-- Success Message -->
-            <div id="success-message" class="hidden bg-green-50 border border-green-200 text-green-800 px-4 py-3 rounded-lg">
-              <div class="flex items-center">
-                <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
-                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
-                </svg>
-                <span>{t.contact.success}</span>
+          <!-- Additional Information -->
+          <div class="mt-8 p-4 bg-blue-50 rounded-lg border border-blue-200">
+            <div class="flex items-start">
+              <svg class="w-6 h-6 text-blue-600 mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+              </svg>
+              <div>
+                <p class="text-sm font-semibold text-blue-900">
+                  {lang === 'en' ? 'What to Expect:' : 'Qué Esperar:'}
+                </p>
+                <ul class="mt-2 space-y-1 text-sm text-slate-700">
+                  <li>• {lang === 'en' ? '30-minute complimentary consultation' : 'Consulta gratuita de 30 minutos'}</li>
+                  <li>• {lang === 'en' ? 'Discuss your goals and challenges' : 'Discute tus objetivos y desafíos'}</li>
+                  <li>• {lang === 'en' ? 'Learn about our coaching approach' : 'Conoce nuestro enfoque de coaching'}</li>
+                  <li>• {lang === 'en' ? 'Get personalized recommendations' : 'Recibe recomendaciones personalizadas'}</li>
+                </ul>
               </div>
             </div>
-          </form>
+          </div>
         </div>
 
         <!-- Contact Information -->
@@ -197,25 +149,5 @@ const t = getTranslations(lang);
   </div>
 </section>
 
-<script>
-  const form = document.getElementById('contact-form') as HTMLFormElement;
-  const successMessage = document.getElementById('success-message');
-
-  form?.addEventListener('submit', (e) => {
-    e.preventDefault();
-
-    // Show success message
-    successMessage?.classList.remove('hidden');
-
-    // Reset form
-    form.reset();
-
-    // Hide success message after 5 seconds
-    setTimeout(() => {
-      successMessage?.classList.add('hidden');
-    }, 5000);
-
-    // In a real application, you would send the form data to a server here
-    console.log('Form submitted');
-  });
-</script>
+<!-- Zcal Embed Script -->
+<script type="text/javascript" async src="https://static.zcal.co/embed/v1/embed.js"></script>
