@@ -12,19 +12,19 @@ const BASE_URL = import.meta.env.BASE_URL;---
 <section id="about" class="py-24 bg-white">
   <div class="container mx-auto px-4 sm:px-6 lg:px-8">
     <div class="max-w-6xl mx-auto">
-      <div class="grid lg:grid-cols-2 gap-12 items-center">
+      <div class="grid lg:grid-cols-2 gap-12 items-start lg:items-center">
         <!-- Photo/Image Placeholder -->
         <div class="order-2 lg:order-1">
           <div class="relative">
             <div class="bg-gradient-to-br from-blue-100 to-teal-50 rounded-2xl p-8 shadow-xl">
-              <div class="aspect-[3/4] bg-white rounded-lg shadow-inner overflow-hidden">
+              <div class="bg-white rounded-lg shadow-inner overflow-hidden">
                 <img
                   src={`${import.meta.env.BASE_URL}images/ana-perez-mena.png`}
                   alt="Ana Perez-Mena - Certified Executive Coach and Leadership Development Specialist with 20+ years experience at Molson Coors"
                   loading="lazy"
                   width="400"
-                  height="533"
-                  class="w-full h-full object-cover"
+                  height="600"
+                  class="w-full h-auto object-contain"
                 />
               </div>
               <!-- Certifications badges -->
