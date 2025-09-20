@@ -12,44 +12,44 @@ const t = getTranslations(lang);
 <section id="contact" class="py-24 bg-gradient-to-b from-slate-50 to-white">
   <div class="container mx-auto px-4 sm:px-6 lg:px-8">
     <!-- CTA Section -->
-    <div class="max-w-4xl mx-auto mb-16 text-center">
-      <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-900 mb-6">
+    <div class="max-w-4xl mx-auto mb-12 sm:mb-16 text-center">
+      <h2 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-slate-900 mb-4 sm:mb-6">
         {t.cta.title}
       </h2>
-      <p class="text-xl text-slate-600 mb-8">
+      <p class="text-base sm:text-lg md:text-xl text-slate-600 mb-6 sm:mb-8">
         {t.cta.subtitle}
       </p>
     </div>
 
     <div class="max-w-6xl mx-auto">
-      <div class="grid lg:grid-cols-2 gap-12">
+      <div class="grid lg:grid-cols-2 gap-8 lg:gap-12">
         <!-- Booking Widget -->
-        <div class="bg-white rounded-2xl shadow-xl p-8">
-          <h3 class="text-2xl font-bold text-slate-900 mb-6">
+        <div class="bg-white rounded-2xl shadow-xl p-6 sm:p-8">
+          <h3 class="text-xl sm:text-2xl font-bold text-slate-900 mb-4 sm:mb-6">
             {t.contact.bookSession}
           </h3>
-          <p class="text-slate-600 mb-8">
+          <p class="text-sm sm:text-base text-slate-600 mb-6 sm:mb-8">
             {t.contact.scheduleText}
           </p>
 
           <!-- Zcal Booking Widget -->
-          <div class="zcal-inline-widget" style="min-height: 400px;">
-            <a href="https://zcal.co/i/37LAziB7" class="inline-flex items-center justify-center px-8 py-4 bg-blue-900 text-white font-semibold rounded-lg hover:bg-blue-800 transition-colors duration-200 shadow-lg hover:shadow-xl">
+          <div class="zcal-inline-widget" style="min-height: 300px;">
+            <a href="https://zcal.co/i/37LAziB7" class="inline-flex items-center justify-center w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-4 bg-blue-900 text-white text-sm sm:text-base font-semibold rounded-lg hover:bg-blue-800 transition-colors duration-200 shadow-lg hover:shadow-xl text-center">
               {lang === 'en' ? 'Schedule Your 30 Minute Discovery Call' : 'Agenda Tu Llamada de Descubrimiento de 30 Minutos'}
             </a>
           </div>
 
           <!-- Additional Information -->
-          <div class="mt-8 p-4 bg-blue-50 rounded-lg border border-blue-200">
+          <div class="mt-6 sm:mt-8 p-3 sm:p-4 bg-blue-50 rounded-lg border border-blue-200">
             <div class="flex items-start">
-              <svg class="w-6 h-6 text-blue-600 mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg class="w-5 h-5 sm:w-6 sm:h-6 text-blue-600 mr-2 sm:mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
               </svg>
-              <div>
-                <p class="text-sm font-semibold text-blue-900">
+              <div class="flex-1">
+                <p class="text-xs sm:text-sm font-semibold text-blue-900">
                   {lang === 'en' ? 'What to Expect:' : 'Qué Esperar:'}
                 </p>
-                <ul class="mt-2 space-y-1 text-sm text-slate-700">
+                <ul class="mt-1 sm:mt-2 space-y-0.5 sm:space-y-1 text-xs sm:text-sm text-slate-700">
                   <li>• {lang === 'en' ? '30-minute complimentary consultation' : 'Consulta gratuita de 30 minutos'}</li>
                   <li>• {lang === 'en' ? 'Discuss your goals and challenges' : 'Discute tus objetivos y desafíos'}</li>
                   <li>• {lang === 'en' ? 'Learn about our coaching approach' : 'Conoce nuestro enfoque de coaching'}</li>
@@ -61,9 +61,9 @@ const t = getTranslations(lang);
         </div>
 
         <!-- Contact Information -->
-        <div class="lg:pl-8">
-          <div class="mb-12">
-            <h3 class="text-2xl font-bold text-slate-900 mb-6">
+        <div class="mt-8 lg:mt-0 lg:pl-8">
+          <div class="mb-8 sm:mb-12">
+            <h3 class="text-xl sm:text-2xl font-bold text-slate-900 mb-4 sm:mb-6">
               {lang === 'en' ? 'Direct Contact' : 'Contacto Directo'}
             </h3>
 
