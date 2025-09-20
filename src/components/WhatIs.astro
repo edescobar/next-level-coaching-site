@@ -1,0 +1,58 @@
+---
+import { getTranslations } from '../i18n/translations';
+
+export interface Props {
+  lang: 'en' | 'es';
+}
+
+const { lang } = Astro.props;
+const t = getTranslations(lang);
+
+const areas = lang === 'en' ? [
+  'Leadership Development',
+  'Career Growth',
+  'Team Effectiveness',
+  'Change Management',
+  'Performance Improvement'
+] : [
+  'Desarrollo de Liderazgo',
+  'Crecimiento Profesional',
+  'Efectividad de Equipos',
+  'Gestión del Cambio',
+  'Mejora del Desempeño'
+];
+---
+
+<section id="what-is" class="py-24 bg-white">
+  <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="max-w-4xl mx-auto">
+      <h2 class="text-3xl sm:text-4xl font-bold text-slate-900 mb-8">
+        {t.whatIs.title}
+      </h2>
+
+      <div class="prose prose-lg max-w-none">
+        <p class="text-lg text-slate-700 leading-relaxed mb-6">
+          {t.whatIs.description}
+        </p>
+
+        <p class="text-lg text-slate-700 leading-relaxed mb-8">
+          {t.whatIs.description2}
+        </p>
+
+        <div class="bg-slate-50 rounded-xl p-8 mb-8">
+          <p class="text-lg font-semibold text-slate-900 mb-4">{t.whatIs.areas}</p>
+          <ul class="grid md:grid-cols-2 gap-4">
+            {areas.map((area) => (
+              <li class="flex items-start">
+                <svg class="w-6 h-6 text-teal-600 mt-0.5 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                </svg>
+                <span class="text-slate-700">{area}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,36 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navigation from '../components/Navigation.astro';
+import Hero from '../components/Hero.astro';
+import WhatIs from '../components/WhatIs.astro';
+import Services from '../components/Services.astro';
+import EmpoweringLeaders from '../components/EmpoweringLeaders.astro';
+import Teams from '../components/Teams.astro';
+import Career from '../components/Career.astro';
+import Future from '../components/Future.astro';
+import About from '../components/About.astro';
+import Contact from '../components/Contact.astro';
+import Footer from '../components/Footer.astro';
+
+const lang = 'en';
+---
+
+<Layout
+  title="NextLevel Coaching - Empower Your Business & Leadership"
+  description="Strategic executive coaching and leadership development. Transform your potential into performance with certified coaching from Ana Perez-Mena."
+  lang={lang}
+>
+  <Navigation lang={lang} />
+  <main class="pt-20">
+    <Hero lang={lang} />
+    <WhatIs lang={lang} />
+    <Services lang={lang} />
+    <EmpoweringLeaders lang={lang} />
+    <Teams lang={lang} />
+    <Career lang={lang} />
+    <Future lang={lang} />
+    <About lang={lang} />
+    <Contact lang={lang} />
+  </main>
+  <Footer lang={lang} />
+</Layout>

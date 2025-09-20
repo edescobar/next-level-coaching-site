@@ -1,0 +1,70 @@
+@import "tailwindcss";
+
+/* Professional color scheme - Corporate blue and trust-building colors */
+:root {
+  --primary-blue: #1e3a8a;
+  --primary-light: #3b82f6;
+  --accent-teal: #0f766e;
+  --accent-gold: #d97706;
+  --neutral-dark: #1e293b;
+  --neutral-gray: #64748b;
+  --neutral-light: #f8fafc;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--neutral-light);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--primary-blue);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary-light);
+}
+
+/* Focus styles for accessibility */
+*:focus-visible {
+  outline: 2px solid var(--primary-light);
+  outline-offset: 2px;
+}
+
+/* Smooth scroll behavior */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Professional font stack */
+body {
+  font-family: 'Roboto', 'Helvetica Neue', -apple-system, BlinkMacSystemFont, 'Segoe UI', Oxygen, Ubuntu, Cantarell, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: var(--neutral-dark);
+  line-height: 1.6;
+}
+
+/* Selection color */
+::selection {
+  background: var(--primary-blue);
+  color: white;
+}
+
+::-moz-selection {
+  background: var(--primary-blue);
+  color: white;
+}
+
+/* Professional heading styles */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Montserrat', 'Helvetica Neue', sans-serif;
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--neutral-dark);
+}
