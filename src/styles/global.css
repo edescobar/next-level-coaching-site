@@ -1,5 +1,24 @@
 @import "tailwindcss";
 
+/* Performance optimizations for Core Web Vitals */
+* {
+  /* Prevent layout shifts */
+  box-sizing: border-box;
+}
+
+/* Optimize font loading to prevent CLS */
+@font-face {
+  font-family: 'Montserrat';
+  font-display: swap;
+  src: local('Montserrat'), url('https://fonts.gstatic.com/s/montserrat/v26/JTUSjIg1_i6t8kCHKm459WlhyyTh89Y.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Roboto';
+  font-display: swap;
+  src: local('Roboto'), url('https://fonts.gstatic.com/s/roboto/v30/KFOmCnqEu92Fr1Mu4mxKKTU1Kg.woff2') format('woff2');
+}
+
 /* Professional color scheme - Corporate blue and trust-building colors */
 :root {
   --primary-blue: #1e3a8a;
@@ -39,6 +58,33 @@
 /* Smooth scroll behavior */
 html {
   scroll-behavior: smooth;
+}
+
+/* Prevent CLS by defining aspect ratios for common elements */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Optimize rendering performance */
+.will-change-transform {
+  will-change: transform;
+}
+
+/* Reduce motion for accessibility */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }
 
 /* Professional font stack */

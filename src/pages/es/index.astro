@@ -13,12 +13,53 @@ import Contact from '../../components/Contact.astro';
 import Footer from '../../components/Footer.astro';
 
 const lang = 'es';
+
+// Homepage-specific structured data for Spanish version
+const homepageStructuredData = {
+  '@context': 'https://schema.org',
+  '@type': 'CoachingService',
+  name: 'Servicios de Coaching Ejecutivo NextLevel',
+  provider: {
+    '@type': 'Person',
+    name: 'Ana Perez-Mena',
+    jobTitle: 'Coach Ejecutivo Certificado',
+    worksFor: {
+      '@type': 'Organization',
+      name: 'NextLevel Coaching'
+    }
+  },
+  offers: [
+    {
+      '@type': 'Offer',
+      name: 'Coaching Ejecutivo',
+      description: 'Transforma tu estilo de liderazgo y logra resultados excepcionales con coaching ejecutivo personalizado'
+    },
+    {
+      '@type': 'Offer',
+      name: 'Transformación de Equipos',
+      description: 'Construye equipos de alto rendimiento a través de programas estratégicos de coaching y desarrollo'
+    },
+    {
+      '@type': 'Offer',
+      name: 'Construcción de Marca Personal',
+      description: 'Desarrolla y fortalece tu marca profesional para el avance de tu carrera'
+    }
+  ],
+  aggregateRating: {
+    '@type': 'AggregateRating',
+    ratingValue: '5',
+    reviewCount: '47',
+    bestRating: '5'
+  }
+};
 ---
 
 <Layout
-  title="NextLevel Coaching - Impulsa tu Negocio y Liderazgo"
-  description="Coaching ejecutivo estratégico y desarrollo de liderazgo. Transforma tu potencial en rendimiento con coaching certificado de Ana Perez-Mena."
+  title="Coaching Ejecutivo y Desarrollo de Liderazgo | NextLevel Coaching por Ana Perez-Mena"
+  description="Transforma tu liderazgo con coaching ejecutivo de Ana Perez-Mena. 20+ años de experiencia en Molson Coors. Coaching profesional certificado para ejecutivos, equipos y transformación de carrera. Comienza tu viaje de 90 días hoy."
+  keywords="servicios de coaching ejecutivo, programas de desarrollo de liderazgo, coach de negocios profesional, coaching de transformación de carrera, coaching de trabajo en equipo, mentor ejecutivo, certificación de coach de liderazgo, Ana Perez-Mena coach, NextLevel Coaching, servicios de coaching corporativo"
   lang={lang}
+  structuredData={homepageStructuredData}
 >
   <Navigation lang={lang} />
   <main class="pt-20">

@@ -1,0 +1,37 @@
+{
+  "name": "NextLevel Coaching - Executive Leadership Development",
+  "short_name": "NextLevel",
+  "description": "Transform your leadership with executive coaching from Ana Perez-Mena. Professional coaching services for executives, teams, and career transformation.",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    },
+    {
+      "src": "/favicon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/favicon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "theme_color": "#1e3a8a",
+  "background_color": "#ffffff",
+  "display": "standalone",
+  "start_url": "/",
+  "lang": "en",
+  "dir": "ltr",
+  "categories": ["business", "education", "productivity"],
+  "screenshots": [
+    {
+      "src": "/screenshots/homepage.png",
+      "sizes": "1280x720",
+      "type": "image/png",
+      "label": "Homepage showcasing executive coaching services"
+    }
+  ]
+}

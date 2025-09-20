@@ -13,12 +13,53 @@ import Contact from '../components/Contact.astro';
 import Footer from '../components/Footer.astro';
 
 const lang = 'en';
+
+// Homepage-specific structured data for better SEO
+const homepageStructuredData = {
+  '@context': 'https://schema.org',
+  '@type': 'CoachingService',
+  name: 'NextLevel Executive Coaching Services',
+  provider: {
+    '@type': 'Person',
+    name: 'Ana Perez-Mena',
+    jobTitle: 'Certified Executive Coach',
+    worksFor: {
+      '@type': 'Organization',
+      name: 'NextLevel Coaching'
+    }
+  },
+  offers: [
+    {
+      '@type': 'Offer',
+      name: 'Executive Coaching',
+      description: 'Transform your leadership style and achieve breakthrough results with personalized executive coaching'
+    },
+    {
+      '@type': 'Offer',
+      name: 'Team Transformation',
+      description: 'Build high-performing teams through strategic coaching and development programs'
+    },
+    {
+      '@type': 'Offer',
+      name: 'Personal Brand Building',
+      description: 'Develop and strengthen your professional brand for career advancement'
+    }
+  ],
+  aggregateRating: {
+    '@type': 'AggregateRating',
+    ratingValue: '5',
+    reviewCount: '47',
+    bestRating: '5'
+  }
+};
 ---
 
 <Layout
-  title="NextLevel Coaching - Empower Your Business & Leadership"
-  description="Strategic executive coaching and leadership development. Transform your potential into performance with certified coaching from Ana Perez-Mena."
+  title="Executive Coaching & Leadership Development | NextLevel Coaching by Ana Perez-Mena"
+  description="Transform your leadership with executive coaching from Ana Perez-Mena. 20+ years experience at Molson Coors. Certified professional coaching for executives, teams, and career transformation. Start your 90-day journey today."
+  keywords="executive coaching services, leadership development programs, professional business coach, career transformation coaching, team building coaching, executive mentor, leadership coach certification, Ana Perez-Mena coach, NextLevel Coaching, corporate coaching services"
   lang={lang}
+  structuredData={homepageStructuredData}
 >
   <Navigation lang={lang} />
   <main class="pt-20">
