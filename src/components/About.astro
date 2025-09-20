@@ -7,7 +7,7 @@ export interface Props {
 
 const { lang } = Astro.props;
 const t = getTranslations(lang);
----
+const BASE_URL = import.meta.env.BASE_URL;---
 
 <section id="about" class="py-24 bg-white">
   <div class="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -91,7 +91,7 @@ const t = getTranslations(lang);
           <!-- CTA Buttons -->
           <div class="flex flex-wrap gap-4">
             <a
-              href={`${lang === 'es' ? '/es' : ''}#contact`}
+              href={`${lang === 'es' ? `${BASE_URL}es/` : BASE_URL}#contact`}
               class="inline-flex items-center px-8 py-4 bg-blue-900 text-white font-semibold rounded-lg hover:bg-blue-800 transition-colors duration-200 shadow-lg hover:shadow-xl"
             >
               {t.nav.getStarted}

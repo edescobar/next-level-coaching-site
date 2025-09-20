@@ -7,7 +7,7 @@ export interface Props {
 
 const { lang } = Astro.props;
 const t = getTranslations(lang);
----
+const BASE_URL = import.meta.env.BASE_URL;---
 
 <section class="relative min-h-[100vh] flex items-center bg-gradient-to-b from-slate-50 to-white">
   <div class="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -41,7 +41,7 @@ const t = getTranslations(lang);
           <!-- CTA Buttons -->
           <div class="flex flex-col sm:flex-row gap-4">
             <a
-              href={`${lang === 'es' ? '/es' : ''}#contact`}
+              href={`${lang === 'es' ? `${BASE_URL}es/` : BASE_URL}#contact`}
               class="inline-flex items-center justify-center px-8 py-4 bg-blue-900 text-white font-semibold rounded-lg hover:bg-blue-800 transition-colors duration-200 shadow-lg hover:shadow-xl"
             >
               {t.hero.cta}
@@ -50,7 +50,7 @@ const t = getTranslations(lang);
               </svg>
             </a>
             <a
-              href={`${lang === 'es' ? '/es' : ''}#approach`}
+              href={`${lang === 'es' ? `${BASE_URL}es/` : BASE_URL}#approach`}
               class="inline-flex items-center justify-center px-8 py-4 bg-white text-blue-900 font-semibold rounded-lg border-2 border-blue-900 hover:bg-blue-50 transition-colors duration-200"
             >
               {t.hero.secondaryCta}
