@@ -4,6 +4,8 @@ import tailwindcss from '@tailwindcss/vite';
 
 // https://astro.build/config
 export default defineConfig({
+  site: 'https://edescobar.github.io',
+  base: '/next-level-coaching-site',
   i18n: {
     defaultLocale: 'en',
     locales: ['en', 'es'],
