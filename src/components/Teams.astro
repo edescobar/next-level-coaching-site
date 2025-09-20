@@ -40,8 +40,8 @@ const BASE_URL = import.meta.env.BASE_URL;---
             </div>
             <div class="ml-4">
               <p class="text-lg text-slate-700">
-                <span class="font-bold text-slate-900">{t.teams.communication.split('–')[0]}</span>
-                <span class="text-slate-600">{' – ' + t.teams.communication.split('–')[1]}</span>
+                <span class="font-bold text-slate-900">{lang === 'en' ? 'Communication' : 'Comunicación'}</span>
+                <span class="text-slate-600"> – {t.teams.communication}</span>
               </p>
             </div>
           </div>
@@ -56,8 +56,8 @@ const BASE_URL = import.meta.env.BASE_URL;---
             </div>
             <div class="ml-4">
               <p class="text-lg text-slate-700">
-                <span class="font-bold text-slate-900">{t.teams.collaboration.split('–')[0]}</span>
-                <span class="text-slate-600">{' – ' + t.teams.collaboration.split('–')[1]}</span>
+                <span class="font-bold text-slate-900">{lang === 'en' ? 'Collaboration' : 'Colaboración'}</span>
+                <span class="text-slate-600"> – {t.teams.collaboration}</span>
               </p>
             </div>
           </div>
@@ -72,8 +72,8 @@ const BASE_URL = import.meta.env.BASE_URL;---
             </div>
             <div class="ml-4">
               <p class="text-lg text-slate-700">
-                <span class="font-bold text-slate-900">{t.teams.trust.split('–')[0]}</span>
-                <span class="text-slate-600">{' – ' + t.teams.trust.split('–')[1]}</span>
+                <span class="font-bold text-slate-900">{lang === 'en' ? 'Trust' : 'Confianza'}</span>
+                <span class="text-slate-600"> – {t.teams.trust}</span>
               </p>
             </div>
           </div>
